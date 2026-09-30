@@ -5,7 +5,7 @@
 Министра труда и социальной защиты населения РК № 267 от 29.06.2023
 (с изменениями № 247 от 17.06.2026).
 
-**Демо:** https://m3etis.is-a.dev/
+**Демо:** https://m3etis.is-a.dev/lifelens/
 
 ## Возможности
 
@@ -59,14 +59,19 @@ python3 -m http.server 8765
 index.html   разметка формы, результата, переключателя языка
 styles.css   палитра категорий, чипы-радио, адаптив
 app.js       шкалы, расчёт, i18n, экспорт PNG
-CNAME        домен GitHub Pages (m3etis.is-a.dev)
 ```
 
 ## Деплой
 
-Проект — статический сайт. GitHub Pages включён на ветке `main`
-(корень репозитория), кастомный домен `m3etis.is-a.dev` задан через
-файл `CNAME`.
+Проект — статический сайт (GitHub Pages, ветка `main`, корень репозитория).
+Размещается как project site под пользовательским доменом:
+
+`https://m3etis.is-a.dev/lifelens/`
+
+DNS `m3etis.is-a.dev` → `m3etis.github.io` (запись CNAME в
+[is-a-dev/register](https://github.com/is-a-dev/register)). Файл `CNAME`
+в этом репозитории не нужен — кастомный домен закреплён за user site
+`m3etis.github.io`.
 
 ## Контрольные примеры
 

@@ -832,7 +832,7 @@
     if (location.protocol === "http:" || location.protocol === "https:") {
       return location.origin + location.pathname;
     }
-    return "lifelens-social-calculator";
+    return "m3etis.is-a.dev/lifelens";
   }
 
   function exportPng() {
