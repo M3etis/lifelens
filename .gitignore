@@ -1,0 +1,9 @@
+# Playwright / browser-test artifacts
+.playwright-cli/
+output/
+
+# macOS
+.DS_Store
+
+# Node (not used by the app, but ignore if created)
+node_modules/

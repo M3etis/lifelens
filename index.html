@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Уровень социального благополучия семьи</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="brand-icon">Усб</div>
+        <div class="brand-text">
+          <h1 data-i18n="appTitle">Уровень социального благополучия семьи</h1>
+          <p class="brand-sub" data-i18n="appSubtitle">Калькулятор по методике приказа № 267 от 29.06.2023</p>
+        </div>
+      </div>
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" class="lang-btn active" data-lang="ru">RU</button>
+          <button type="button" class="lang-btn" data-lang="kz">KZ</button>
+        </div>
+        <button type="submit" form="calc" class="btn btn-primary" data-i18n="calculateBtn">Рассчитать</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="intro-card">
+      <p data-i18n="introText"></p>
+    </section>
+
+    <form id="calc" novalidate>
+      <div id="sections-root"></div>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary btn-lg" data-i18n="calculateBtn">Рассчитать</button>
+        <button type="button" class="btn btn-ghost" id="reset-btn" data-i18n="resetBtn">Сбросить</button>
+      </div>
+    </form>
+
+    <section id="result" class="result hidden" aria-live="polite">
+      <div class="result-hero" id="result-hero">
+        <div class="result-category">
+          <div class="result-letter" id="result-letter">A</div>
+          <div class="result-meta">
+            <div class="result-label" data-i18n="resultCategoryLabel">Категория</div>
+            <div class="result-name" id="result-name"></div>
+          </div>
+        </div>
+        <div class="result-score-block">
+          <div class="result-label" data-i18n="resultScoreLabel">Итоговый балл</div>
+          <div class="result-score" id="result-score">0</div>
+        </div>
+      </div>
+
+      <p class="result-desc" id="result-desc"></p>
+
+      <h3 class="breakdown-title" data-i18n="breakdownTitle">Баллы по направлениям</h3>
+      <div class="breakdown" id="breakdown"></div>
+
+      <div class="result-actions">
+        <button type="button" class="btn btn-primary" id="export-btn" data-i18n="exportBtn">Скачать PNG</button>
+        <button type="button" class="btn btn-ghost" id="recalc-btn" data-i18n="recalcBtn">Пересчитать</button>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p data-i18n="footerNote"></p>
+    </footer>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
